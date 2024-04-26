@@ -52,7 +52,7 @@ public class LoginFormTest {
 
     @Test
     public void testEmptyUsernameAndCorrectPasswordAndDontCareValCode() {
-        LoginStatus status = LoginForm.login(null, "Upe_pass");
+        LoginStatus status = LoginForm.login(null, "Akbo_pass");
         Assert.assertFalse("Expected login to fail", status.isLoginSuccess());
         Assert.assertEquals("Wrong error message", "Empty Username", status.getErrorMessage());
         System.out.println("[Empty username, correct password] >> " + status);
@@ -76,7 +76,7 @@ public class LoginFormTest {
 
     @Test
     public void testWrongUsernameAndCorrectPasswordAndDontCareValCode() {
-        LoginStatus status = LoginForm.login("abc", "Upe_pass");
+        LoginStatus status = LoginForm.login("abc", "Akbo_pass");
         Assert.assertFalse("Expected login to fail", status.isLoginSuccess());
         Assert.assertEquals("Wrong error message", "Credential mismatch", status.getErrorMessage());
         System.out.println("[Wrong username, correct password] >> " + status);
@@ -84,7 +84,7 @@ public class LoginFormTest {
 
     @Test
     public void testCorrectUsernameAndEmptyPasswordAndDontCareValCode() {
-        LoginStatus status = LoginForm.login("Upeksha", null);
+        LoginStatus status = LoginForm.login("Sithira", null);
         Assert.assertFalse("Expected login to fail", status.isLoginSuccess());
         Assert.assertEquals("Wrong error message", "Empty Password", status.getErrorMessage());
         System.out.println("[Correct username, empty password] >> " + status);
@@ -92,7 +92,7 @@ public class LoginFormTest {
 
     @Test
     public void testCorrectUsernameAndWrongPasswordAndDontCareValCode() {
-        LoginStatus status = LoginForm.login("Upeksha", "xyz");
+        LoginStatus status = LoginForm.login("Sithira", "xyz");
         Assert.assertFalse("Expected login to fail", status.isLoginSuccess());
         Assert.assertEquals("Wrong error message", "Credential mismatch", status.getErrorMessage());
         System.out.println("[Correct username, wrong password] >> " + status);
@@ -100,7 +100,7 @@ public class LoginFormTest {
 
     @Test
     public void testCorrectUsernameAndCorrectPasswordAndDontCareValCode() {
-        LoginStatus status = LoginForm.login("Upeksha", "Upe_pass");
+        LoginStatus status = LoginForm.login("Sithira", "Akbo_pass");
         Assert.assertTrue("Expected login to succeed", status.isLoginSuccess());
         Assert.assertEquals("Wrong validation code", "123456", status.getErrorMessage());
         System.out.println("[Correct username, correct password] >> " + status);
@@ -124,7 +124,7 @@ public class LoginFormTest {
 
     @Test
     public void testEmptyUsernameAndCorrectPasswordAndWrongValCode() {
-        LoginStatus status = LoginForm.login(null, "Upe_pass");
+        LoginStatus status = LoginForm.login(null, "Akbo_pass");
         Assert.assertFalse("Expected login to fail", status.isLoginSuccess());
         Assert.assertEquals("Wrong error message", "Empty Username", status.getErrorMessage());
         System.out.println("[Empty username, correct password] >> " + status);
@@ -148,7 +148,7 @@ public class LoginFormTest {
 
     @Test
     public void testWrongUsernameAndCorrectPasswordAndWrongValCode() {
-        LoginStatus status = LoginForm.login("abc", "Upe_pass");
+        LoginStatus status = LoginForm.login("abc", "Akbo_pass");
         Assert.assertFalse("Expected login to fail", status.isLoginSuccess());
         Assert.assertEquals("Wrong error message", "Credential mismatch", status.getErrorMessage());
         System.out.println("[Wrong username, correct password] >> " + status);
@@ -156,7 +156,7 @@ public class LoginFormTest {
 
     @Test
     public void testCorrectUsernameAndEmptyPasswordAndWrongValCode() {
-        LoginStatus status = LoginForm.login("Upeksha", null);
+        LoginStatus status = LoginForm.login("Sithira", null);
         Assert.assertFalse("Expected login to fail", status.isLoginSuccess());
         Assert.assertEquals("Wrong error message", "Empty Password", status.getErrorMessage());
         System.out.println("[Correct username, empty password] >> " + status);
@@ -164,7 +164,7 @@ public class LoginFormTest {
 
     @Test
     public void testCorrectUsernameAndWrongPasswordAndWrongValCode() {
-        LoginStatus status = LoginForm.login("Upeksha", "xyz");
+        LoginStatus status = LoginForm.login("Sithira", "xyz");
         Assert.assertFalse("Expected login to fail", status.isLoginSuccess());
         Assert.assertEquals("Wrong error message", "Credential mismatch", status.getErrorMessage());
         System.out.println("[Correct username, wrong password] >> " + status);
@@ -172,7 +172,7 @@ public class LoginFormTest {
 
     @Test
     public void testCorrectUsernameAndCorrectPasswordAndWrongValCode() {
-        LoginStatus status = LoginForm.login("Upeksha", "Upe_pass");
+        LoginStatus status = LoginForm.login("Sithira", "Akbo_pass");
         Assert.assertTrue("Expected login to succeed", status.isLoginSuccess());
         Assert.assertEquals("Wrong validation code", "123456", status.getErrorMessage());
         System.out.println("[Correct username, correct password] >> " + status);
@@ -196,7 +196,7 @@ public class LoginFormTest {
 
     @Test
     public void testEmptyUsernameAndCorrectPasswordAndCorrectValCode() {
-        LoginStatus status = LoginForm.login(null, "Upe_pass");
+        LoginStatus status = LoginForm.login(null, "Akbo_pass");
         Assert.assertFalse("Expected login to fail", status.isLoginSuccess());
         Assert.assertEquals("Wrong error message", "Empty Username", status.getErrorMessage());
         System.out.println("[Empty username, correct password] >> " + status);
@@ -220,7 +220,7 @@ public class LoginFormTest {
 
     @Test
     public void testWrongUsernameAndCorrectPasswordAndCorrectValCode() {
-        LoginStatus status = LoginForm.login("abc", "Upe_pass");
+        LoginStatus status = LoginForm.login("abc", "Akbo_pass");
         Assert.assertFalse("Expected login to fail", status.isLoginSuccess());
         Assert.assertEquals("Wrong error message", "Credential mismatch", status.getErrorMessage());
         System.out.println("[Wrong username, correct password] >> " + status);
@@ -228,7 +228,7 @@ public class LoginFormTest {
 
     @Test
     public void testCorrectUsernameAndEmptyPasswordAndCorrectValCode() {
-        LoginStatus status = LoginForm.login("Upeksha", null);
+        LoginStatus status = LoginForm.login("Sithira", null);
         Assert.assertFalse("Expected login to fail", status.isLoginSuccess());
         Assert.assertEquals("Wrong error message", "Empty Password", status.getErrorMessage());
         System.out.println("[Correct username, empty password] >> " + status);
@@ -236,7 +236,7 @@ public class LoginFormTest {
 
     @Test
     public void testCorrectUsernameAndWrongPasswordAndCorrectValCode() {
-        LoginStatus status = LoginForm.login("Upeksha", "xyz");
+        LoginStatus status = LoginForm.login("Sithira", "xyz");
         Assert.assertFalse("Expected login to fail", status.isLoginSuccess());
         Assert.assertEquals("Wrong error message", "Credential mismatch", status.getErrorMessage());
         System.out.println("[Correct username, wrong password] >> " + status);
@@ -244,7 +244,7 @@ public class LoginFormTest {
 
     @Test
     public void testCorrectUsernameAndCorrectPasswordAndCorrectValCode() {
-        LoginStatus status = LoginForm.login("Upeksha", "Upe_pass");
+        LoginStatus status = LoginForm.login("Sithira", "Akbo_pass");
         Assert.assertTrue("Expected login to succeed", status.isLoginSuccess());
         Assert.assertEquals("Wrong validation code", "123456", status.getErrorMessage());
         System.out.println("[Correct username, correct password] >> " + status);
